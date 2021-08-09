@@ -27,14 +27,6 @@ public class WorkingService {
         return workingRepository.findById(idWorking);
     }
 
-    public WorkingDay updateWork(WorkingDay workingDay){
-        return  workingRepository.save(workingDay);
-    }
-
-    public void deleteWork(Long idWorking) {
-        workingRepository.deleteById(idWorking);
-    }
-
     public WorkingDay updateWorkingDay(WorkingDay workingDay) {
         return workingRepository.save(workingDay);
     }

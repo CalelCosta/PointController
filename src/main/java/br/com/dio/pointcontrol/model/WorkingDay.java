@@ -1,6 +1,7 @@
 package br.com.dio.pointcontrol.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -12,6 +13,7 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class WorkingDay  {
     @Id
     private Long id;

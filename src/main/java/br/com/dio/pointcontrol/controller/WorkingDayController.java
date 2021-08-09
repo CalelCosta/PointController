@@ -28,16 +28,16 @@ public class WorkingDayController {
 
     @GetMapping("{/idWorking}")
     public WorkingDay getWorkById(@PathVariable("idWorking") Long idWorking) throws Exception {
-        return workingService.findById(idWorking).orElseThrow(() -> new Exception("Not Found"));
+        return workingService.findById(idWorking).orElseThrow(() -> new Exception("Not Found!"));
     }
 
     @PutMapping
-    public WorkingDay updateJornadaTrabalho(@RequestBody WorkingDay workingDay){
+    public WorkingDay updateWorkingDay(@RequestBody WorkingDay workingDay){
         return workingService.updateWorkingDay(workingDay);
     }
 
     @DeleteMapping("/{idWorking}")
-    public ResponseEntity deleteByID(@PathVariable("idWorking") Long idWorking) throws Exception {
+    public ResponseEntity deleteWorkingDay(@PathVariable("idWorking") Long idWorking) throws Exception {
         try {
             workingService.deleteWorkingDay(idWorking);
         } catch (Exception e) {
